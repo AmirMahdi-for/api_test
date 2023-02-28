@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Route::prefix('procducts')->group(function(){
 
     Route::get('', 'ProductController@index')->name('get.products');
@@ -23,6 +24,8 @@ Route::prefix('procducts')->group(function(){
     
 });
 =======
+=======
+>>>>>>> a40736a9a5b1d2a0c59ea66c261e65193d9c82d0
 Route::group([], function($router){
     $router->get('users', 'app\Http\Controllers\UserController@index');
 });
