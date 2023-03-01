@@ -17,7 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('procducts')->group(function(){
 
     Route::get('', 'ProductController@index')->name('get.products');
-    Route::get('/{id}', 'ProductController@get_product')->name('get.product');
+    Route::get('/{$id}', 'ProductController@get_product')->name('get.product');
     Route::get('/feature', 'ProductController@get_feature')->name('get.products.feature');
     
 });
+
+
+Route::prefix('conmments')->group(function(){
+    
+    Route::get('/{$product_id}', 'CommentController@index')->name('get.comments');
+    Route::post('/{$product_id}', 'ProductController@store')->name('add.comments');
+
+});
+
+Route::get('sponsor', 'SponsorController@index')->name('get.sponsor');
