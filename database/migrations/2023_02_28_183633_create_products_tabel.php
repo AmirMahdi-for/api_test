@@ -20,7 +20,7 @@ class CreateProductsTabel extends Migration
             $table->string('img_url');
             $table->string('price');
             $table->string('score');
-            $table->string('isFeatured');
+            $table->boolean('isFeatured');
             $table->timestamps();
         });
     }
